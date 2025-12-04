@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Favourites Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #e0e7ff;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-layout {
+      display: flex;
+      flex: 1;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      max-width: 280px;
+      background: #fff;
+      border-radius: 6px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .sidebar p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .content {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 6px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #e5e7eb;
+    }
+
+    tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    form {
+      display: grid;
+      gap: 10px;
+    }
+
+    label {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #d1d5db;
+      font-size: 0.95rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="submit"] {
+      width: 140px;
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      background: #1e3a8a;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background: #1d4ed8;
+    }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .main-layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>Hoppyken Portfolio</h1>
+      <p>Favourites</p>
+      <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="#favorites">Favorite Books</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="main-layout">
+      <aside class="sidebar" id="gallery">
+        <h2>Profile</h2>
+
+        <img src="img personal/personal.png" alt="my image" />
+        <p><strong>Name:</strong> Ochei Chinenye Hope</p>
+        <p><strong>Role:</strong> Civil Servant / Developer</p>
+        <p><strong>Interests:</strong> Web design, books, movies</p>
+      </aside>
+
+      <section class="content">
+        <section class="card" id="favorites">
+          <h2>My Favorite Books</h2>
+          <table>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Year</th>
+              <th>Genre</th>
+            </tr>
+            <tr>
+              <td>Life 3.0: Being Human in the Age of Artificial Intelligence</td>
+              <td>Max Tegmark</td>
+              <td>2017</td>
+              <td>Science</td>
+            </tr>
+            <tr>
+              <td>Human Compatible: Artificial Intelligence and the Problem of Control</td>
+              <td>Stuart Russell</td>
+              <td>2019</td>
+              <td>Science</td>
+            </tr>
+            <tr>
+              <td>To Kill a Mockingbird</td>
+              <td>Harper Lee</td>
+              <td>1960</td>
+              <td>Fiction</td>
+            </tr>
+            <tr>
+              <td>The Pragmatic Programmer</td>
+              <td>Andrew Hunt, David Thomas</td>
+              <td>1999</td>
+              <td>Programming</td>
+            </tr>
+          </table>
+        </section>
+
+        <section class="card" id="contact">
+          <h2>Contact Me</h2>
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+
+            <div>
+              <label for="topic">Topic</label>
+              <input type="text" id="topic" name="topic" placeholder="What is this about?" />
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+            </div>
+
+            <input type="submit" value="Send Message" />
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 Hoppyken Portfolio | All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
